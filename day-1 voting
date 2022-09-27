@@ -1,18 +1,51 @@
 #include<stdio.h>
-
 int main()
 {
-	int a ;
-	printf("Enter the age of the person: ");
-	scanf("%d",&a);
-	if (a>=18)
+	int  age,x;
+	printf("enter age of person:");
+  if(scanf("%d",&age)==1)
 	{
-		printf("Eigibal for voting");
+    if(age>17)
+	{
+		printf("\nperson is eligible for voting");
 	}
-	else
-	{
-		printf("Not eligibal for voting\n");
-	}	
-
+	else{
+	 printf("\nperson is not eligible");
+	 x=18-age;
+    	printf("\nyour allowed to vote after %d",x);
+	}
+	}
+	else{
+		printf("invalid");
+	}
 	return 0;
 }
+
+sample input:
+enter your age : 7
+
+sample output:
+you are allowed to vote after 11 years.
+
+test cases :
+1) 25
+enter age of person:25
+person is eligible for voting
+
+2) eighteen 
+enter age of person:eighteen
+invalid
+
+3) 12
+enter age of person:12
+person is not eligible
+your allowed to vote after 6
+
+4) -18
+enter age of person:-18
+person is not eligible
+your allowed to vote after 36
+
+5) 34.5
+enter age of person:34.5
+person is eligible for voting
